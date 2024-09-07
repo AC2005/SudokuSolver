@@ -1,0 +1,22 @@
+PROJECT SUMMARY & FEATURES
+
+This is a broswer based auto-sudoku solver. Upon opening the app, the user is presented with an empty sudoku grid and can
+fill out any numbers in the grid as needed. Then, the sudoku grid is solved via a backtracking algorithm after hitting
+the 'solve' button. Note that the algorithm will validate the user's input (which must be an integer between 1 and 9
+inclusive). This algorithm is animated so that the user can see the live progress of the computer trying out different
+possibilities.
+
+Additionally, the numbers that the users input are highlighted in ___ while the numbers filled in by the computer are
+displayed in __ so that the user can keep track of which numbers were inputted manually. Upon completion of the algorithm,
+a message is displayed depending on if the puzzle had a solution or not. Afterward, the user may hit the 'clear' button
+to start over.
+
+
+
+TIME SPENT: In total, developing the sudoku solving algorithm and the frontend took around 4 hours.
+
+RUNNING THE PROJECT:
+
+
+
+
