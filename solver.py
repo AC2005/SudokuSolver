@@ -26,6 +26,7 @@ def solve_with_steps(board):
     cols = collections.defaultdict(set)
     boxes = collections.defaultdict(set)
 
+    # store used numbers
     for i in range(len(board)):
         for j in range(len(board[0])):
             if board[i][j].isnumeric():
@@ -33,6 +34,7 @@ def solve_with_steps(board):
                 cols[j].add(board[i][j])
                 boxes[3 * (i // 3) + j // 3].add(board[i][j])
     res = []
+    # backtracking algorithm
     def backtrack(x, y):
         nonlocal res
         if x == len(board):
@@ -50,7 +52,7 @@ def solve_with_steps(board):
                     boxes[3 * (x // 3) + (y // 3)].add(str(i))
 
                     res.append([row[:] for row in board])
-
+                    # found valid number and calling next backtrack
                     if y == len(board[0]) - 1:
                         if backtrack(x + 1, 0):
                             return True
@@ -63,6 +65,7 @@ def solve_with_steps(board):
                     board[x][y] = ''
                     res.append([row[:] for row in board])
         else:
+            # logic to determine if algorithm should go to next row and next cell
             if y == len(board[0]) - 1:
                 if backtrack(x + 1, 0):
                     return True

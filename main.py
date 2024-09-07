@@ -2,8 +2,6 @@ import reactpy as rp
 import asyncio
 from solver import is_valid_soduku,  solve_with_steps
 
-# ReactPy Sudoku App
-
 @rp.component
 def SudokuApp():
     # Initialize a 9x9 grid with empty values
@@ -28,10 +26,10 @@ def SudokuApp():
         set_flag(new_flag)
 
     async def animate_solver():
-        solver = solve_with_steps(board)  # Initialize the generator
+        solver = solve_with_steps(board)  # States generated from solving sudoku
         for res in solver:
             set_board(res)
-            await asyncio.sleep(0.005)
+            await asyncio.sleep(0.005) # delay for animation
 
         solved = True
         for row in board:
@@ -45,6 +43,7 @@ def SudokuApp():
         set_solving(False)
 
     def handle_solve(event):
+        # check if valid input
         if not is_valid_soduku(board):
             set_error_message("Invalid Input")
             return
@@ -57,6 +56,7 @@ def SudokuApp():
 
     rp.hooks.use_effect(lambda: start_animation(), [solving])
 
+    # resetting the board
     def handle_reset(event):
         set_board(initial_board)
         set_flag(initial_flag)
