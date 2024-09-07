@@ -12,11 +12,18 @@ a message is displayed depending on if the puzzle had a solution or not. Afterwa
 to start over.
 
 
-
 TIME SPENT: In total, developing the sudoku solving algorithm and the frontend took around 4 hours.
 
 RUNNING THE PROJECT:
 
+Open an IDE (e.g PyCharm, VSCode, etc) and clone the repository (git clone https://github.com/AC2005/SudokuSolver).
 
+Then, make sure all the requirements are installed by running 'pip install -r requirements.txt'.
+
+Then, run main.py (either via the IDE terminal 'python main.py' or through the IDE)
+
+Once running, the program will print out a URL to the console that will look something like this: 'http://127.0.0.1:8000'
+
+Click/paste the URL into a web browser and the app will open.
 
 
