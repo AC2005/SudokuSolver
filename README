@@ -6,8 +6,8 @@ the 'solve' button. Note that the algorithm will validate the user's input (whic
 inclusive). This algorithm is animated so that the user can see the live progress of the computer trying out different
 possibilities.
 
-Additionally, the numbers that the users input are highlighted in ___ while the numbers filled in by the computer are
-displayed in __ so that the user can keep track of which numbers were inputted manually. Upon completion of the algorithm,
+Additionally, the numbers that the users input are highlighted in red while the numbers filled in by the computer are
+displayed in black so that the user can keep track of which numbers were inputted manually. Upon completion of the algorithm,
 a message is displayed depending on if the puzzle had a solution or not. Afterward, the user may hit the 'clear' button
 to start over.
 
